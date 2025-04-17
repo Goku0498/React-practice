@@ -1,14 +1,31 @@
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import { useState } from 'react'
+import "./app.css";
 
 function App() {
 
+  const [count, setCount]=useState(0);
+
+
+  function handleAdd() {
+    setCount(count+1);
+  }
+  function handleSub() {
+    setCount(count-1);
+  }
+
+  function handleReset() {
+    setCount(0);
+  }
+
   return (
-    <>
-      <Header />
-      <h1 style={{color:"Blue"}}>Hello!!</h1>
-      <Footer />
-    </>
+    <div className="App">
+      <div className="box">
+        <p>{count}</p>
+        <button onClick={handleSub} className="sub">SUB</button>
+        <button onClick={handleAdd} className="add">ADD</button>
+        <button onClick={handleReset} className="reset">RESET</button>
+      </div>
+    </div>
   )
 }
 
