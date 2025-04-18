@@ -1,7 +1,20 @@
 import { useState } from 'react'
+import Header from './components/Header';
+import Footer from './components/Footer';
 import "./app.css";
+import Tasklist from './components/Tasklist';
 
 function App() {
+  // State practice second example
+  return (
+    <div className="App">
+      <Header />
+      <Tasklist />
+      <Footer />
+    </div>
+  )
+
+  /* State Practice first example
 
   const [count, setCount]=useState(0);
 
@@ -26,7 +39,9 @@ function App() {
         <button onClick={handleReset} className="reset">RESET</button>
       </div>
     </div>
-  )
+  ) */
+
+
 }
 
 export default App
