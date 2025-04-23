@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Taskcard from "./Card"
+import Boxcard from "./BoxCard"
 
 function Tasklist() {
     const [tasks, setTasks] = useState([
@@ -22,10 +23,23 @@ function Tasklist() {
                 <button onClick={() => setShow(!show)} className="trigger">Toggle</button>
                 {show && tasks.map((task) => (
                     <Taskcard key={task.id} task={task} handelDelete={handelDelete} />
+                    
                 ))}
             </ul>
+            <Boxcard result="success">
+                <p className="title">Lorem ipsum dolor sit amet.</p>
+                <p className="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, a. Ipsam ducimus fugiat facilis beatae.</p>
+            </Boxcard>
+            
+            <div className="box warning">
+                <p className="title">Lorem ipsum dolor sit amet.</p>
+                <p className="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, a. Ipsam ducimus fugiat facilis beatae.</p>
+            </div>
+            <div className="box alert">
+                <p className="title">Lorem ipsum dolor sit amet.</p>
+                <p className="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, a. Ipsam ducimus fugiat facilis beatae.</p>
+            </div>
         </>
     )
 }
-
 export default Tasklist
