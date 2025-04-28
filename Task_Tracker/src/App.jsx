@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import TaskList from "./components/TaskList";
-import AddTask from "./components/AddTask";
-import './App.css';
+
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import TaskList from "./components/Tasklist"
+import AddTask from "./components/AddTask"
+import "./app.css"
 
 function App() {
 
