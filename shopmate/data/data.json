@@ -16,13 +16,13 @@
             "id": 3,
             "name": "The Completed guide to Backend development",
             "price": 32.99,
-            "in_stock": true
+            "in_stock": false
         },
         {
             "id": 4,
             "name": "Build a Blockchain from scratch in Go",
             "price": 20.99,
-            "in_stock": false
+            "in_stock": true
         }
     ]
 }
